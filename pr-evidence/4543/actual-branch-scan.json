@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-10-17T19:52:40.051Z",
+  "commit": "7195001933db08a90f3720df48818d4a2ce64e8d",
+  "parent": "e542dca0bdcc262fa035dcf7fc33910cdcc8cdaf",
+  "scans": [
+    {
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit HEAD^1 --severity ERROR --error --json --metrics=off --disable-version-check",
+      "exit": 0,
+      "findings": 0
+    },
+    {
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit HEAD^1 --severity WARNING --json --metrics=off --disable-version-check",
+      "exit": 0,
+      "findings": 0
+    }
+  ]
+}

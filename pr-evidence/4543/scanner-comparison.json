@@ -1,0 +1,175 @@
+{
+  "capturedAt": "2026-10-17T19:46:24.671Z",
+  "environment": "Native Semgrep 1.181.0, real repository rules, isolated synthetic Git PR merge; not a GitHub-hosted runner",
+  "validation": "all 8 scanner/fixture combinations passed exact finding and exit-code assertions",
+  "results": [
+    {
+      "variant": "before",
+      "scenario": "inherited-only",
+      "severity": "ERROR",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6 --severity ERROR --error --json --metrics=off --disable-version-check",
+      "baselineExpression": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "resolvedBaseline": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "mergeBase": "bac2f366d40e7afccb343cc976bafb8a5ca87e9c",
+      "eventBase": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "scannedMerge": "20ba7fd6b17f666c95f488315db5b43ced528a34",
+      "exit": 1,
+      "findings": [
+        {
+          "rule": "interpreter-execution",
+          "path": "base.rs",
+          "line": 3,
+          "severity": "ERROR"
+        }
+      ],
+      "baselineMatchesScannedBase": false
+    },
+    {
+      "variant": "after",
+      "scenario": "inherited-only",
+      "severity": "ERROR",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit HEAD^1 --severity ERROR --error --json --metrics=off --disable-version-check",
+      "baselineExpression": "HEAD^1",
+      "resolvedBaseline": "bac2f366d40e7afccb343cc976bafb8a5ca87e9c",
+      "mergeBase": "bac2f366d40e7afccb343cc976bafb8a5ca87e9c",
+      "eventBase": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "scannedMerge": "20ba7fd6b17f666c95f488315db5b43ced528a34",
+      "exit": 0,
+      "findings": [],
+      "baselineMatchesScannedBase": true
+    },
+    {
+      "variant": "before",
+      "scenario": "inherited-only",
+      "severity": "WARNING",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6 --severity WARNING --json --metrics=off --disable-version-check",
+      "baselineExpression": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "resolvedBaseline": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "mergeBase": "bac2f366d40e7afccb343cc976bafb8a5ca87e9c",
+      "eventBase": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "scannedMerge": "20ba7fd6b17f666c95f488315db5b43ced528a34",
+      "exit": 0,
+      "findings": [
+        {
+          "rule": "filesystem-deletion",
+          "path": "base.rs",
+          "line": 4,
+          "severity": "WARNING"
+        }
+      ],
+      "baselineMatchesScannedBase": false
+    },
+    {
+      "variant": "after",
+      "scenario": "inherited-only",
+      "severity": "WARNING",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit HEAD^1 --severity WARNING --json --metrics=off --disable-version-check",
+      "baselineExpression": "HEAD^1",
+      "resolvedBaseline": "bac2f366d40e7afccb343cc976bafb8a5ca87e9c",
+      "mergeBase": "bac2f366d40e7afccb343cc976bafb8a5ca87e9c",
+      "eventBase": "a6dfcaf5bef3acecfa34d63b6107ae3b8b4ae5b6",
+      "scannedMerge": "20ba7fd6b17f666c95f488315db5b43ced528a34",
+      "exit": 0,
+      "findings": [],
+      "baselineMatchesScannedBase": true
+    },
+    {
+      "variant": "before",
+      "scenario": "new-pr-finding",
+      "severity": "ERROR",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit 96e0b1ced6c2a8f3aafcd6d4168386458512276d --severity ERROR --error --json --metrics=off --disable-version-check",
+      "baselineExpression": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "resolvedBaseline": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "mergeBase": "15607fb4f09bdf60ec6c7fcf9411158d801e1d5a",
+      "eventBase": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "scannedMerge": "334f32124ab285a764773a53c976202fbf327485",
+      "exit": 1,
+      "findings": [
+        {
+          "rule": "interpreter-execution",
+          "path": "base.rs",
+          "line": 3,
+          "severity": "ERROR"
+        },
+        {
+          "rule": "interpreter-execution",
+          "path": "pr.rs",
+          "line": 3,
+          "severity": "ERROR"
+        }
+      ],
+      "baselineMatchesScannedBase": false
+    },
+    {
+      "variant": "after",
+      "scenario": "new-pr-finding",
+      "severity": "ERROR",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit HEAD^1 --severity ERROR --error --json --metrics=off --disable-version-check",
+      "baselineExpression": "HEAD^1",
+      "resolvedBaseline": "15607fb4f09bdf60ec6c7fcf9411158d801e1d5a",
+      "mergeBase": "15607fb4f09bdf60ec6c7fcf9411158d801e1d5a",
+      "eventBase": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "scannedMerge": "334f32124ab285a764773a53c976202fbf327485",
+      "exit": 1,
+      "findings": [
+        {
+          "rule": "interpreter-execution",
+          "path": "pr.rs",
+          "line": 3,
+          "severity": "ERROR"
+        }
+      ],
+      "baselineMatchesScannedBase": true
+    },
+    {
+      "variant": "before",
+      "scenario": "new-pr-finding",
+      "severity": "WARNING",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit 96e0b1ced6c2a8f3aafcd6d4168386458512276d --severity WARNING --json --metrics=off --disable-version-check",
+      "baselineExpression": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "resolvedBaseline": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "mergeBase": "15607fb4f09bdf60ec6c7fcf9411158d801e1d5a",
+      "eventBase": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "scannedMerge": "334f32124ab285a764773a53c976202fbf327485",
+      "exit": 0,
+      "findings": [
+        {
+          "rule": "filesystem-deletion",
+          "path": "base.rs",
+          "line": 4,
+          "severity": "WARNING"
+        },
+        {
+          "rule": "filesystem-deletion",
+          "path": "pr.rs",
+          "line": 4,
+          "severity": "WARNING"
+        }
+      ],
+      "baselineMatchesScannedBase": false
+    },
+    {
+      "variant": "after",
+      "scenario": "new-pr-finding",
+      "severity": "WARNING",
+      "command": "semgrep scan --config .semgrep.yml --baseline-commit HEAD^1 --severity WARNING --json --metrics=off --disable-version-check",
+      "baselineExpression": "HEAD^1",
+      "resolvedBaseline": "15607fb4f09bdf60ec6c7fcf9411158d801e1d5a",
+      "mergeBase": "15607fb4f09bdf60ec6c7fcf9411158d801e1d5a",
+      "eventBase": "96e0b1ced6c2a8f3aafcd6d4168386458512276d",
+      "scannedMerge": "334f32124ab285a764773a53c976202fbf327485",
+      "exit": 0,
+      "findings": [
+        {
+          "rule": "filesystem-deletion",
+          "path": "pr.rs",
+          "line": 4,
+          "severity": "WARNING"
+        }
+      ],
+      "baselineMatchesScannedBase": true
+    }
+  ],
+  "baselineCommit": "e542dca0bdcc262fa035dcf7fc33910cdcc8cdaf",
+  "fixedCommit": "7195001933db08a90f3720df48818d4a2ce64e8d"
+}
