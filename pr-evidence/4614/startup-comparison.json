@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-10-17T19:18:58.309Z",
+  "method": "release builds, real spawnSync wall clock including parent process overhead; alternating before/after ordering, 5 warmups and 100 measured runs each; local macOS only",
+  "command": "rtk rewrite \"git status\"",
+  "expectedExit": 3,
+  "results": {
+    "before": {
+      "medianMs": 10.475125000000048,
+      "p95Ms": 13.075208000000202,
+      "minMs": 9.581083000000035,
+      "maxMs": 17.43054099999995,
+      "measuredRuns": 100
+    },
+    "after": {
+      "medianMs": 10.461125000000038,
+      "p95Ms": 12.507916999999907,
+      "minMs": 9.661957999999913,
+      "maxMs": 18.45224999999982,
+      "measuredRuns": 100
+    }
+  }
+}

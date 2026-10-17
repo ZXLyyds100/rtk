@@ -1,0 +1,513 @@
+{
+  "capturedAt": "2026-10-17T19:03:32.797Z",
+  "environment": "real RTK + real oc 4.22.18, simulated local Kubernetes API; existing pod fixture adapted to requested namespace",
+  "validation": "all 12 binary/case combinations and targeting/control invariants passed",
+  "results": [
+    {
+      "variant": "before",
+      "case": "pods",
+      "command": "rtk oc pods --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader",
+      "args": [
+        "oc",
+        "pods",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader"
+      ],
+      "exit": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "error: unknown command \"pods\" for \"oc\"\n\nDid you mean this?\n\tlogs\n",
+      "elapsedMs": 393,
+      "requests": [],
+      "binarySha256": "07cd5f0807825b9fb4c51591d62643b985055875dd4576d2dc6259781236573f"
+    },
+    {
+      "variant": "after",
+      "case": "pods",
+      "command": "rtk oc pods --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader",
+      "args": [
+        "oc",
+        "pods",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "19 pods: 19\n",
+      "stderr": "",
+      "elapsedMs": 1076,
+      "requests": [
+        {
+          "run": "after-pods-7db635ff-1a73-4b09-b8e1-a5bfd25007e3",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-pods-7db635ff-1a73-4b09-b8e1-a5bfd25007e3",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-pods-7db635ff-1a73-4b09-b8e1-a5bfd25007e3",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-pods-7db635ff-1a73-4b09-b8e1-a5bfd25007e3",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods",
+          "impersonateUser": "reader"
+        }
+      ],
+      "binarySha256": "7a599ca9fde2e264b804672544b40ef2f2533769cd28514f22dcf1edc7be8ee6"
+    },
+    {
+      "variant": "before",
+      "case": "leading",
+      "command": "rtk oc --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader pods",
+      "args": [
+        "oc",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader",
+        "pods"
+      ],
+      "exit": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "Error: flags cannot be placed before plugin name: --context\n",
+      "elapsedMs": 119,
+      "requests": [],
+      "binarySha256": "07cd5f0807825b9fb4c51591d62643b985055875dd4576d2dc6259781236573f"
+    },
+    {
+      "variant": "after",
+      "case": "leading",
+      "command": "rtk oc --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader pods",
+      "args": [
+        "oc",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader",
+        "pods"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "19 pods: 19\n",
+      "stderr": "",
+      "elapsedMs": 74,
+      "requests": [
+        {
+          "run": "after-leading-0e70bace-b86d-4862-b8f9-6d90ee3d89fa",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-leading-0e70bace-b86d-4862-b8f9-6d90ee3d89fa",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-leading-0e70bace-b86d-4862-b8f9-6d90ee3d89fa",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-leading-0e70bace-b86d-4862-b8f9-6d90ee3d89fa",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods",
+          "impersonateUser": "reader"
+        }
+      ],
+      "binarySha256": "7a599ca9fde2e264b804672544b40ef2f2533769cd28514f22dcf1edc7be8ee6"
+    },
+    {
+      "variant": "before",
+      "case": "services",
+      "command": "rtk oc services --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader",
+      "args": [
+        "oc",
+        "services",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader"
+      ],
+      "exit": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "error: unknown command \"services\" for \"oc\"\n",
+      "elapsedMs": 123,
+      "requests": [],
+      "binarySha256": "07cd5f0807825b9fb4c51591d62643b985055875dd4576d2dc6259781236573f"
+    },
+    {
+      "variant": "after",
+      "case": "services",
+      "command": "rtk oc services --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader",
+      "args": [
+        "oc",
+        "services",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "1 services:\n  staging/api ClusterIP [80→8080]\n",
+      "stderr": "",
+      "elapsedMs": 74,
+      "requests": [
+        {
+          "run": "after-services-3d74ec4d-d0a8-4f3b-a49d-d252ea6e0487",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-services-3d74ec4d-d0a8-4f3b-a49d-d252ea6e0487",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-services-3d74ec4d-d0a8-4f3b-a49d-d252ea6e0487",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-services-3d74ec4d-d0a8-4f3b-a49d-d252ea6e0487",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/services",
+          "impersonateUser": "reader"
+        }
+      ],
+      "binarySha256": "7a599ca9fde2e264b804672544b40ef2f2533769cd28514f22dcf1edc7be8ee6"
+    },
+    {
+      "variant": "before",
+      "case": "logs",
+      "command": "rtk oc --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader logs api -c app",
+      "args": [
+        "oc",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader",
+        "logs",
+        "api",
+        "-c",
+        "app"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "2026-10-18T00:00:00Z API ready\n2026-10-18T00:00:01Z Serving requests\n",
+      "stderr": "",
+      "elapsedMs": 164,
+      "requests": [
+        {
+          "run": "before-logs-073613e4-5733-49ae-b6c1-db310143a98b",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "before-logs-073613e4-5733-49ae-b6c1-db310143a98b",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "before-logs-073613e4-5733-49ae-b6c1-db310143a98b",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "before-logs-073613e4-5733-49ae-b6c1-db310143a98b",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "before-logs-073613e4-5733-49ae-b6c1-db310143a98b",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods/api/log",
+          "impersonateUser": "reader"
+        }
+      ],
+      "binarySha256": "07cd5f0807825b9fb4c51591d62643b985055875dd4576d2dc6259781236573f"
+    },
+    {
+      "variant": "after",
+      "case": "logs",
+      "command": "rtk oc --context prod --kubeconfig \"<isolated kubeconfig>\" -n staging --as reader logs api -c app",
+      "args": [
+        "oc",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "-n",
+        "staging",
+        "--as",
+        "reader",
+        "logs",
+        "api",
+        "-c",
+        "app"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "2026-10-18T00:00:00Z API ready\n2026-10-18T00:00:01Z Serving requests\n",
+      "stderr": "",
+      "elapsedMs": 95,
+      "requests": [
+        {
+          "run": "after-logs-b28a7768-5784-4464-a9f2-51a0be1abd41",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-logs-b28a7768-5784-4464-a9f2-51a0be1abd41",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-logs-b28a7768-5784-4464-a9f2-51a0be1abd41",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-logs-b28a7768-5784-4464-a9f2-51a0be1abd41",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods/api",
+          "impersonateUser": "reader"
+        },
+        {
+          "run": "after-logs-b28a7768-5784-4464-a9f2-51a0be1abd41",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods/api/log",
+          "impersonateUser": "reader"
+        }
+      ],
+      "binarySha256": "7a599ca9fde2e264b804672544b40ef2f2533769cd28514f22dcf1edc7be8ee6"
+    },
+    {
+      "variant": "before",
+      "case": "get-wide",
+      "command": "rtk oc --context prod --kubeconfig \"<isolated kubeconfig>\" get -o wide pods -n staging",
+      "args": [
+        "oc",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "get",
+        "-o",
+        "wide",
+        "pods",
+        "-n",
+        "staging"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "NAME                                                     AGE\nalertmanager-main-0                                      <unknown>\nalertmanager-main-1                                      <unknown>\ncluster-monitoring-operator-7fb9fd4c5d-wm2k6             <unknown>\nkube-state-metrics-75586fdddb-5zw6b                      <unknown>\nmetrics-server-fdfb77995-jmqnm                           <unknown>\nmetrics-server-fdfb77995-w4r8p                           <unknown>\nmonitoring-plugin-85b45d978c-27rfm                       <unknown>\nmonitoring-plugin-85b45d978c-64g98                       <unknown>\nnode-exporter-5fw9f                                      <unknown>\nnode-exporter-gbnrd                                      <unknown>\nopenshift-state-metrics-856bc7fff5-p8s92                 <unknown>\nprometheus-k8s-0                                         <unknown>\nprometheus-k8s-1                                         <unknown>\nprometheus-operator-5978c4f47f-9zwdq                     <unknown>\nprometheus-operator-admission-webhook-6485c485f4-8cfhf   <unknown>\nprometheus-operator-admission-webhook-6485c485f4-b655d   <unknown>\ntelemeter-client-5d75f79f95-hr22b                        <unknown>\nthanos-querier-5fcf655bd-4h2m2                           <unknown>\nthanos-querier-5fcf655bd-wd28r                           <unknown>\n",
+      "stderr": "",
+      "elapsedMs": 182,
+      "requests": [
+        {
+          "run": "before-get-wide-10375b02-9b66-42b8-ad84-599b15ec6188",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": null
+        },
+        {
+          "run": "before-get-wide-10375b02-9b66-42b8-ad84-599b15ec6188",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": null
+        },
+        {
+          "run": "before-get-wide-10375b02-9b66-42b8-ad84-599b15ec6188",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": null
+        },
+        {
+          "run": "before-get-wide-10375b02-9b66-42b8-ad84-599b15ec6188",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods",
+          "impersonateUser": null
+        }
+      ],
+      "binarySha256": "07cd5f0807825b9fb4c51591d62643b985055875dd4576d2dc6259781236573f"
+    },
+    {
+      "variant": "after",
+      "case": "get-wide",
+      "command": "rtk oc --context prod --kubeconfig \"<isolated kubeconfig>\" get -o wide pods -n staging",
+      "args": [
+        "oc",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "get",
+        "-o",
+        "wide",
+        "pods",
+        "-n",
+        "staging"
+      ],
+      "exit": 0,
+      "signal": null,
+      "stdout": "NAME                                                     AGE\nalertmanager-main-0                                      <unknown>\nalertmanager-main-1                                      <unknown>\ncluster-monitoring-operator-7fb9fd4c5d-wm2k6             <unknown>\nkube-state-metrics-75586fdddb-5zw6b                      <unknown>\nmetrics-server-fdfb77995-jmqnm                           <unknown>\nmetrics-server-fdfb77995-w4r8p                           <unknown>\nmonitoring-plugin-85b45d978c-27rfm                       <unknown>\nmonitoring-plugin-85b45d978c-64g98                       <unknown>\nnode-exporter-5fw9f                                      <unknown>\nnode-exporter-gbnrd                                      <unknown>\nopenshift-state-metrics-856bc7fff5-p8s92                 <unknown>\nprometheus-k8s-0                                         <unknown>\nprometheus-k8s-1                                         <unknown>\nprometheus-operator-5978c4f47f-9zwdq                     <unknown>\nprometheus-operator-admission-webhook-6485c485f4-8cfhf   <unknown>\nprometheus-operator-admission-webhook-6485c485f4-b655d   <unknown>\ntelemeter-client-5d75f79f95-hr22b                        <unknown>\nthanos-querier-5fcf655bd-4h2m2                           <unknown>\nthanos-querier-5fcf655bd-wd28r                           <unknown>\n",
+      "stderr": "",
+      "elapsedMs": 176,
+      "requests": [
+        {
+          "run": "after-get-wide-2aa55aa6-f4d1-4677-b826-34e4f86c1696",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": null
+        },
+        {
+          "run": "after-get-wide-2aa55aa6-f4d1-4677-b826-34e4f86c1696",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": null
+        },
+        {
+          "run": "after-get-wide-2aa55aa6-f4d1-4677-b826-34e4f86c1696",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": null
+        },
+        {
+          "run": "after-get-wide-2aa55aa6-f4d1-4677-b826-34e4f86c1696",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/staging/pods",
+          "impersonateUser": null
+        }
+      ],
+      "binarySha256": "7a599ca9fde2e264b804672544b40ef2f2533769cd28514f22dcf1edc7be8ee6"
+    },
+    {
+      "variant": "before",
+      "case": "forbidden",
+      "command": "rtk oc pods --context prod --kubeconfig \"<isolated kubeconfig>\" --as forbidden",
+      "args": [
+        "oc",
+        "pods",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "--as",
+        "forbidden"
+      ],
+      "exit": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "error: unknown command \"pods\" for \"oc\"\n\nDid you mean this?\n\tlogs\n",
+      "elapsedMs": 70,
+      "requests": [],
+      "binarySha256": "07cd5f0807825b9fb4c51591d62643b985055875dd4576d2dc6259781236573f"
+    },
+    {
+      "variant": "after",
+      "case": "forbidden",
+      "command": "rtk oc pods --context prod --kubeconfig \"<isolated kubeconfig>\" --as forbidden",
+      "args": [
+        "oc",
+        "pods",
+        "--context",
+        "prod",
+        "--kubeconfig",
+        "<isolated kubeconfig>",
+        "--as",
+        "forbidden"
+      ],
+      "exit": 1,
+      "signal": null,
+      "stdout": "{\n    \"apiVersion\": \"v1\",\n    \"items\": [],\n    \"kind\": \"List\",\n    \"metadata\": {\n        \"resourceVersion\": \"\"\n    }\n}\n",
+      "stderr": "Error from server (Forbidden): pods is forbidden for forbidden\n",
+      "elapsedMs": 68,
+      "requests": [
+        {
+          "run": "after-forbidden-e05cb350-f175-4ce7-9436-33d880f999aa",
+          "cluster": "prod",
+          "path": "/api",
+          "impersonateUser": "forbidden"
+        },
+        {
+          "run": "after-forbidden-e05cb350-f175-4ce7-9436-33d880f999aa",
+          "cluster": "prod",
+          "path": "/apis",
+          "impersonateUser": "forbidden"
+        },
+        {
+          "run": "after-forbidden-e05cb350-f175-4ce7-9436-33d880f999aa",
+          "cluster": "prod",
+          "path": "/api/v1",
+          "impersonateUser": "forbidden"
+        },
+        {
+          "run": "after-forbidden-e05cb350-f175-4ce7-9436-33d880f999aa",
+          "cluster": "prod",
+          "path": "/api/v1/namespaces/default/pods",
+          "impersonateUser": "forbidden"
+        }
+      ],
+      "binarySha256": "7a599ca9fde2e264b804672544b40ef2f2533769cd28514f22dcf1edc7be8ee6"
+    }
+  ],
+  "baselineCommit": "e542dca0bdcc262fa035dcf7fc33910cdcc8cdaf",
+  "fixedCommit": "4a7619605eadb71cbfdcd5df3400764e19d7a205"
+}
