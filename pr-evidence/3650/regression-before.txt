@@ -1,0 +1,34 @@
+   Compiling rtk v0.49.0 (<workspace>/work/repos/rtk-4614-baseline)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.75s
+     Running unittests src/lib.rs (target/debug/deps/rtk-24011eb9cb8a9a86)
+
+running 11 tests
+test discover::tests::test_estimate_hook_coverage_false_when_denied ... ok
+test discover::tests::test_estimate_hook_coverage_false_when_hook_not_installed ... ok
+test discover::tests::test_estimate_hook_coverage_false_for_unattestable_construct ... ok
+test discover::tests::test_estimate_hook_coverage_short_circuits_before_attestation ... ok
+test discover::tests::test_estimate_hook_coverage_sees_chain_wide_deny_from_full_raw_command ... ok
+test discover::tests::test_estimate_hook_coverage_false_for_deferred_wrapper ... ok
+test discover::tests::test_estimate_hook_coverage_uses_full_raw_command_for_permission_check ... ok
+test discover::tests::test_estimate_hook_coverage_false_when_excluded_by_config ... ok
+test discover::tests::test_estimate_hook_coverage_attests_early_wrapper_ask ... ok
+test discover::tests::test_estimate_hook_coverage_true_for_rewritable_command ... ok
+test discover::tests::test_estimate_hook_coverage_scans_attestation_once ... FAILED
+
+failures:
+
+---- discover::tests::test_estimate_hook_coverage_scans_attestation_once stdout ----
+
+thread 'discover::tests::test_estimate_hook_coverage_scans_attestation_once' (7838239) panicked at src/discover/mod.rs:744:13:
+assertion `left == right` failed: coverage must reuse the permission check's attestation
+  left: 2
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    discover::tests::test_estimate_hook_coverage_scans_attestation_once
+
+test result: FAILED. 10 passed; 1 failed; 0 ignored; 0 measured; 4320 filtered out; finished in 0.06s
+
+error: test failed, to rerun pass `--lib`

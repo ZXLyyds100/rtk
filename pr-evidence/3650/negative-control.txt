@@ -1,0 +1,24 @@
+   Compiling rtk v0.49.0 (<workspace>/work/repos/rtk-4614-baseline)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.61s
+     Running unittests src/lib.rs (target/debug/deps/rtk-24011eb9cb8a9a86)
+
+running 1 test
+test discover::tests::test_estimate_hook_coverage_attests_early_wrapper_ask ... FAILED
+
+failures:
+
+---- discover::tests::test_estimate_hook_coverage_attests_early_wrapper_ask stdout ----
+
+thread 'discover::tests::test_estimate_hook_coverage_attests_early_wrapper_ask' (8087669) panicked at src/discover/mod.rs:773:13:
+assertion `left == right` failed: bash -c 'printf x' > /tmp/rtk-3650-not-executed && git status
+  left: true
+ right: false
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    discover::tests::test_estimate_hook_coverage_attests_early_wrapper_ask
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 4332 filtered out; finished in 0.06s
+
+error: test failed, to rerun pass `--lib`

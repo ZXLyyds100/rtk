@@ -1,0 +1,788 @@
+{
+  "capturedAt": "2026-10-17T21:27:25.613Z",
+  "environment": "Darwin 25.6.0 arm64; native debug RTK binaries",
+  "boundary": "Isolated synthetic Claude transcript; transcript commands are data, never executed. Telemetry disabled; no user credentials or real agent sessions.",
+  "baselineCommit": "e542dca0bdcc262fa035dcf7fc33910cdcc8cdaf",
+  "binaryHashes": {
+    "before": "6ce9ea09c23663b53c29007ce7500a7d58e8fe19fef5d04cca867f55be08180c",
+    "after": "f13920449b81b500dca91682a0814b7e60777813428362f2b2c34908ac5a5653"
+  },
+  "assertions": "20 discover reports and rewrite outputs/exits exactly preserved",
+  "scenarios": [
+    {
+      "name": "default",
+      "command": "git status",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 3,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 1,
+        "already_rtk_estimated": 1,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "allow",
+      "command": "git status",
+      "installed": true,
+      "permissions": {
+        "allow": [
+          "Bash(git *)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 0,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 1,
+        "already_rtk_estimated": 1,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "ask",
+      "command": "git status",
+      "installed": true,
+      "permissions": {
+        "ask": [
+          "Bash(git *)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 3,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 1,
+        "already_rtk_estimated": 1,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "deny",
+      "command": "git status",
+      "installed": true,
+      "permissions": {
+        "deny": [
+          "Bash(git *)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 2,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "substitution",
+      "command": "git status $(printf x)",
+      "installed": true,
+      "permissions": {
+        "allow": [
+          "Bash(*)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "file-redirect",
+      "command": "git status > never-written",
+      "installed": true,
+      "permissions": {
+        "allow": [
+          "Bash(*)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "discarded-output",
+      "command": "git status > /dev/null",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 3,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 1,
+        "already_rtk_estimated": 1,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-ask",
+      "command": "bash -c 'git status'",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 3,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-with-substitution",
+      "command": "bash -c 'git status' $(printf x)",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-with-redirect",
+      "command": "bash -c 'git status' > never-written",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-defer",
+      "command": "bash -c 'git push'",
+      "installed": true,
+      "permissions": {
+        "deny": [
+          "Bash(git push)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "prefixed-wrapper-defer",
+      "command": "env bash -c 'git push'",
+      "installed": true,
+      "permissions": {
+        "deny": [
+          "Bash(git push)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [
+          {
+            "base_command": "bash",
+            "count": 1,
+            "example": "env bash -c 'git push'"
+          }
+        ],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-sibling",
+      "command": "bash -c 'printf x' && git status",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 3,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 2,
+        "already_rtk": 1,
+        "already_rtk_estimated": 1,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-redirect-sibling",
+      "command": "bash -c 'printf x' > never-written && git status",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 2,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "wrapper-substitution-sibling",
+      "command": "bash -c 'printf x' $(printf x) && git status",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 2,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "chain-deny",
+      "command": "cd /sensitive && git status",
+      "installed": true,
+      "permissions": {
+        "deny": [
+          "Bash(cd /sensitive)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 2,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 2,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "bypass",
+      "command": "RTK_DISABLED=1 git status",
+      "installed": true,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 1,
+        "rtk_disabled_estimated": 1,
+        "rtk_disabled_examples": [
+          "git status (1x)"
+        ],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "bypass-denied",
+      "command": "RTK_DISABLED=1 git status",
+      "installed": true,
+      "permissions": {
+        "deny": [
+          "Bash(RTK_DISABLED=1 git status)"
+        ]
+      },
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 2,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "excluded",
+      "command": "git status",
+      "installed": true,
+      "permissions": {},
+      "excluded": [
+        "git"
+      ],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 1,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    },
+    {
+      "name": "no-hook",
+      "command": "git status",
+      "installed": false,
+      "permissions": {},
+      "excluded": [],
+      "discoverEqual": true,
+      "rewriteEqual": true,
+      "rewriteExit": 3,
+      "report": {
+        "sessions_scanned": 1,
+        "total_commands": 1,
+        "already_rtk": 0,
+        "already_rtk_estimated": 0,
+        "measured_since": null,
+        "since_days": 30,
+        "supported": [
+          {
+            "command": "git status",
+            "count": 1,
+            "rtk_equivalent": "rtk git",
+            "category": "Git",
+            "estimated_savings_tokens": 9,
+            "estimated_savings_pct": 69.23076923076923,
+            "rtk_status": "Existing"
+          }
+        ],
+        "unsupported": [],
+        "parse_errors": 0,
+        "rtk_disabled_count": 0,
+        "rtk_disabled_estimated": 0,
+        "rtk_disabled_examples": [],
+        "agent_status": {
+          "cursor_hook_installed": false,
+          "hermes_plugin_installed": false,
+          "copilot_hook_installed": false
+        }
+      }
+    }
+  ],
+  "timing": {
+    "commands": 20000,
+    "samples": [
+      {
+        "round": 0,
+        "variant": "before",
+        "milliseconds": 1156.884
+      },
+      {
+        "round": 0,
+        "variant": "after",
+        "milliseconds": 1140.544
+      },
+      {
+        "round": 1,
+        "variant": "after",
+        "milliseconds": 1138.334
+      },
+      {
+        "round": 1,
+        "variant": "before",
+        "milliseconds": 1163.826
+      },
+      {
+        "round": 2,
+        "variant": "before",
+        "milliseconds": 1157.179
+      },
+      {
+        "round": 2,
+        "variant": "after",
+        "milliseconds": 1156.646
+      },
+      {
+        "round": 3,
+        "variant": "after",
+        "milliseconds": 1189.152
+      },
+      {
+        "round": 3,
+        "variant": "before",
+        "milliseconds": 1200.476
+      },
+      {
+        "round": 4,
+        "variant": "before",
+        "milliseconds": 1169.275
+      },
+      {
+        "round": 4,
+        "variant": "after",
+        "milliseconds": 1144.05
+      }
+    ],
+    "medianBeforeMs": 1163.826,
+    "medianAfterMs": 1144.05,
+    "caveat": "Local debug-build observation only; do not extrapolate to release/production or claim a 50% whole-command speedup."
+  },
+  "fixedCommit": "587ec0b223f99a4aa2f491a693c09246cd4f7b42"
+}

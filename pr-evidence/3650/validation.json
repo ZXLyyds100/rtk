@@ -1,0 +1,92 @@
+{
+  "capturedAt": "2026-10-17T21:22:27.144Z",
+  "results": [
+    {
+      "name": "fmt",
+      "command": "cargo fmt --all --check",
+      "exit": 0,
+      "seconds": 1.064
+    },
+    {
+      "name": "proxy-fmt",
+      "command": "cargo fmt --manifest-path proxy/Cargo.toml --all --check",
+      "exit": 0,
+      "seconds": 0.87
+    },
+    {
+      "name": "focused-discover-final",
+      "command": "cargo test --locked --lib discover::",
+      "exit": 0,
+      "seconds": 8.566,
+      "passed": 683,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "name": "focused-permissions-final",
+      "command": "cargo test --locked --lib hooks::permissions::",
+      "exit": 0,
+      "seconds": 0.493,
+      "passed": 103,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "name": "clippy",
+      "command": "cargo clippy --workspace --all-targets --locked -- -D warnings",
+      "exit": 0,
+      "seconds": 4.12
+    },
+    {
+      "name": "workspace",
+      "command": "cargo test --workspace --locked",
+      "exit": 0,
+      "seconds": 97.541,
+      "passed": 4965,
+      "failed": 0,
+      "ignored": 8
+    },
+    {
+      "name": "ignored",
+      "command": "cargo test --workspace --locked -- --ignored",
+      "exit": 0,
+      "seconds": 1.764,
+      "passed": 8,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "name": "oss",
+      "command": "cargo test --no-default-features --locked",
+      "exit": 0,
+      "seconds": 98.511,
+      "passed": 4505,
+      "failed": 0,
+      "ignored": 8
+    },
+    {
+      "name": "hostile",
+      "command": "cargo test --locked --lib test_estimate_hook_coverage_",
+      "exit": 0,
+      "seconds": 0.457,
+      "passed": 11,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "name": "nested-temp",
+      "command": "cargo test --locked --lib test_permission_details_",
+      "exit": 0,
+      "seconds": 0.154,
+      "passed": 2,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "name": "build-after",
+      "command": "cargo build --locked",
+      "exit": 0,
+      "seconds": 0.131
+    }
+  ]
+}

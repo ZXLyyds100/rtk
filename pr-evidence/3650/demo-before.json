@@ -1,0 +1,27 @@
+{
+  "variant": "before",
+  "command": "rtk discover --all --format json",
+  "fixture": "20,000 controlled stored Bash requests, not executed",
+  "exit": 0,
+  "milliseconds": 1259.338,
+  "report": {
+    "sessions_scanned": 1,
+    "total_commands": 20000,
+    "already_rtk": 20000,
+    "already_rtk_estimated": 20000,
+    "measured_since": null,
+    "since_days": 30,
+    "supported": [],
+    "unsupported": [],
+    "parse_errors": 0,
+    "rtk_disabled_count": 0,
+    "rtk_disabled_estimated": 0,
+    "rtk_disabled_examples": [],
+    "agent_status": {
+      "cursor_hook_installed": false,
+      "hermes_plugin_installed": false,
+      "copilot_hook_installed": false
+    }
+  },
+  "reportHash": "45c43c8fcff731d1b3c13af289b464350b91e07399c924e6556fac5a5021b38b"
+}
