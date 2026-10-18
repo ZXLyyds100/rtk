@@ -1,0 +1,6 @@
+[sqlfluff]
+dialect = ansi
+rules = CP01,LT09,LT12
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper

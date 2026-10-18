@@ -1,0 +1,378 @@
+{
+  "at": "2026-10-18T09:03:21.669Z",
+  "variant": "after",
+  "baseline": "e542dca0bdcc262fa035dcf7fc33910cdcc8cdaf",
+  "binary": {
+    "sha256": "3322666d59e77beed3db719a118982fe522bb0c4552a221fdab2c5d9bc58cc0b"
+  },
+  "scope": "Real locally installed Ruff/SQLFluff on purpose-built SQL/Python files; no mocked tool output, product UI, hosted CI or model-billing claim.",
+  "matrix": [
+    {
+      "tool": "sqlfluff",
+      "version": "sqlfluff, version 4.3.0",
+      "diagnostics": [
+        {
+          "file": "models/customers.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/customers.sql",
+          "code": "LT09",
+          "message": "Select targets should be on a new line unless there is only one select target.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/customers.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 17
+        },
+        {
+          "file": "models/customers.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 32
+        },
+        {
+          "file": "models/orders.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/orders.sql",
+          "code": "LT09",
+          "message": "Select targets should be on a new line unless there is only one select target.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/orders.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 18
+        },
+        {
+          "file": "models/orders.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 30
+        },
+        {
+          "file": "models/settings.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/settings.sql",
+          "code": "LT09",
+          "message": "Select targets should be on a new line unless there is only one select target.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/settings.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 20
+        },
+        {
+          "file": "models/settings.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 34
+        },
+        {
+          "file": "models/settings.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 40
+        },
+        {
+          "file": "models/status.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/status.sql",
+          "code": "LT09",
+          "message": "Select targets should be on a new line unless there is only one select target.",
+          "line": 1,
+          "col": 1
+        },
+        {
+          "file": "models/status.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 25
+        },
+        {
+          "file": "models/status.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 37
+        },
+        {
+          "file": "models/status.sql",
+          "code": "CP01",
+          "message": "Keywords must be upper case.",
+          "line": 1,
+          "col": 43
+        }
+      ],
+      "native": {
+        "command": "sqlfluff",
+        "args": [
+          "lint",
+          "--ignore-local-config",
+          "--config",
+          "<workspace>/work/rtk-3920/fixture/.sqlfluff",
+          "models"
+        ],
+        "exit": 1,
+        "stdout": "== [models/customers.sql] FAIL\nL:   1 | P:   1 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:   1 | LT09 | Select targets should be on a new line unless there is\n                       | only one select target. [layout.select_targets]\nL:   1 | P:  17 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:  32 | CP01 | Keywords must be upper case. [capitalisation.keywords]\n== [models/orders.sql] FAIL\nL:   1 | P:   1 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:   1 | LT09 | Select targets should be on a new line unless there is\n                       | only one select target. [layout.select_targets]\nL:   1 | P:  18 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:  30 | CP01 | Keywords must be upper case. [capitalisation.keywords]\n== [models/settings.sql] FAIL\nL:   1 | P:   1 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:   1 | LT09 | Select targets should be on a new line unless there is\n                       | only one select target. [layout.select_targets]\nL:   1 | P:  20 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:  34 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:  40 | CP01 | Keywords must be upper case. [capitalisation.keywords]\n== [models/status.sql] FAIL\nL:   1 | P:   1 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:   1 | LT09 | Select targets should be on a new line unless there is\n                       | only one select target. [layout.select_targets]\nL:   1 | P:  25 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:  37 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nL:   1 | P:  43 | CP01 | Keywords must be upper case. [capitalisation.keywords]\nAll Finished!\n",
+        "stderr": "",
+        "bytes": 1863
+      },
+      "raw": {
+        "command": "sqlfluff",
+        "args": [
+          "lint",
+          "--ignore-local-config",
+          "--config",
+          "<workspace>/work/rtk-3920/fixture/.sqlfluff",
+          "models",
+          "--format",
+          "json"
+        ],
+        "exit": 1,
+        "stdout": "[{\"filepath\": \"models/customers.sql\", \"violations\": [{\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"SELECT\", \"start_line_no\": 1, \"start_line_pos\": 1, \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}, {\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"LT09\", \"description\": \"Select targets should be on a new line unless there is only one select target.\", \"name\": \"layout.select_targets\", \"warning\": false, \"fixes\": [{\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 7, \"start_file_pos\": 6, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 8, \"start_file_pos\": 7, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 11, \"start_file_pos\": 10, \"end_line_no\": 1, \"end_line_pos\": 12, \"end_file_pos\": 11}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 12, \"start_file_pos\": 11, \"end_line_no\": 1, \"end_line_pos\": 12, \"end_file_pos\": 11}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 16, \"start_file_pos\": 15, \"end_line_no\": 1, \"end_line_pos\": 17, \"end_file_pos\": 16}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 17, \"start_file_pos\": 16, \"end_line_no\": 1, \"end_line_pos\": 17, \"end_file_pos\": 16}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 16, \"end_file_pos\": 15}, {\"start_line_no\": 1, \"start_line_pos\": 17, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"FROM\", \"start_line_no\": 1, \"start_line_pos\": 17, \"start_file_pos\": 16, \"end_line_no\": 1, \"end_line_pos\": 21, \"end_file_pos\": 20}], \"start_file_pos\": 16, \"end_line_no\": 1, \"end_line_pos\": 21, \"end_file_pos\": 20}, {\"start_line_no\": 1, \"start_line_pos\": 32, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"WHERE\", \"start_line_no\": 1, \"start_line_pos\": 32, \"start_file_pos\": 31, \"end_line_no\": 1, \"end_line_pos\": 37, \"end_file_pos\": 36}], \"start_file_pos\": 31, \"end_line_no\": 1, \"end_line_pos\": 37, \"end_file_pos\": 36}], \"statistics\": {\"source_chars\": 51, \"templated_chars\": 51, \"segments\": 43, \"raw_segments\": 26}, \"timings\": {\"templating\": 0.00027112499810755253, \"lexing\": 0.00034591701114550233, \"parsing\": 0.004149915999732912, \"linting\": 0.0005567919579334557, \"CP01\": 0.0002452500048093498, \"LT09\": 0.00018224999075755477, \"LT12\": 3.1125033274292946e-05}}, {\"filepath\": \"models/orders.sql\", \"violations\": [{\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"SELECT\", \"start_line_no\": 1, \"start_line_pos\": 1, \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}, {\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"LT09\", \"description\": \"Select targets should be on a new line unless there is only one select target.\", \"name\": \"layout.select_targets\", \"warning\": false, \"fixes\": [{\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 7, \"start_file_pos\": 6, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 8, \"start_file_pos\": 7, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 11, \"start_file_pos\": 10, \"end_line_no\": 1, \"end_line_pos\": 12, \"end_file_pos\": 11}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 12, \"start_file_pos\": 11, \"end_line_no\": 1, \"end_line_pos\": 12, \"end_file_pos\": 11}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 17, \"start_file_pos\": 16, \"end_line_no\": 1, \"end_line_pos\": 18, \"end_file_pos\": 17}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 18, \"start_file_pos\": 17, \"end_line_no\": 1, \"end_line_pos\": 18, \"end_file_pos\": 17}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 17, \"end_file_pos\": 16}, {\"start_line_no\": 1, \"start_line_pos\": 18, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"FROM\", \"start_line_no\": 1, \"start_line_pos\": 18, \"start_file_pos\": 17, \"end_line_no\": 1, \"end_line_pos\": 22, \"end_file_pos\": 21}], \"start_file_pos\": 17, \"end_line_no\": 1, \"end_line_pos\": 22, \"end_file_pos\": 21}, {\"start_line_no\": 1, \"start_line_pos\": 30, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"WHERE\", \"start_line_no\": 1, \"start_line_pos\": 30, \"start_file_pos\": 29, \"end_line_no\": 1, \"end_line_pos\": 35, \"end_file_pos\": 34}], \"start_file_pos\": 29, \"end_line_no\": 1, \"end_line_pos\": 35, \"end_file_pos\": 34}], \"statistics\": {\"source_chars\": 46, \"templated_chars\": 46, \"segments\": 43, \"raw_segments\": 26}, \"timings\": {\"templating\": 2.4457986000925303e-05, \"lexing\": 0.000208082958124578, \"parsing\": 0.0033272079890593886, \"linting\": 0.0004723340389318764, \"CP01\": 0.0001978339860215783, \"LT09\": 0.00016729201888665557, \"LT12\": 2.7292000595480204e-05}}, {\"filepath\": \"models/settings.sql\", \"violations\": [{\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"SELECT\", \"start_line_no\": 1, \"start_line_pos\": 1, \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}, {\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"LT09\", \"description\": \"Select targets should be on a new line unless there is only one select target.\", \"name\": \"layout.select_targets\", \"warning\": false, \"fixes\": [{\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 7, \"start_file_pos\": 6, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 8, \"start_file_pos\": 7, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 13, \"start_file_pos\": 12, \"end_line_no\": 1, \"end_line_pos\": 14, \"end_file_pos\": 13}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 14, \"start_file_pos\": 13, \"end_line_no\": 1, \"end_line_pos\": 14, \"end_file_pos\": 13}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 19, \"start_file_pos\": 18, \"end_line_no\": 1, \"end_line_pos\": 20, \"end_file_pos\": 19}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 20, \"start_file_pos\": 19, \"end_line_no\": 1, \"end_line_pos\": 20, \"end_file_pos\": 19}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 19, \"end_file_pos\": 18}, {\"start_line_no\": 1, \"start_line_pos\": 20, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"FROM\", \"start_line_no\": 1, \"start_line_pos\": 20, \"start_file_pos\": 19, \"end_line_no\": 1, \"end_line_pos\": 24, \"end_file_pos\": 23}], \"start_file_pos\": 19, \"end_line_no\": 1, \"end_line_pos\": 24, \"end_file_pos\": 23}, {\"start_line_no\": 1, \"start_line_pos\": 34, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"ORDER\", \"start_line_no\": 1, \"start_line_pos\": 34, \"start_file_pos\": 33, \"end_line_no\": 1, \"end_line_pos\": 39, \"end_file_pos\": 38}], \"start_file_pos\": 33, \"end_line_no\": 1, \"end_line_pos\": 39, \"end_file_pos\": 38}, {\"start_line_no\": 1, \"start_line_pos\": 40, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"BY\", \"start_line_no\": 1, \"start_line_pos\": 40, \"start_file_pos\": 39, \"end_line_no\": 1, \"end_line_pos\": 42, \"end_file_pos\": 41}], \"start_file_pos\": 39, \"end_line_no\": 1, \"end_line_pos\": 42, \"end_file_pos\": 41}], \"statistics\": {\"source_chars\": 47, \"templated_chars\": 47, \"segments\": 39, \"raw_segments\": 24}, \"timings\": {\"templating\": 3.0416005756706e-05, \"lexing\": 0.00020491599570959806, \"parsing\": 0.0026987919700331986, \"linting\": 0.0005153330275788903, \"CP01\": 0.0002411670284345746, \"LT09\": 0.00017129199113696814, \"LT12\": 2.800003858283162e-05}}, {\"filepath\": \"models/status.sql\", \"violations\": [{\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"SELECT\", \"start_line_no\": 1, \"start_line_pos\": 1, \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 7, \"end_file_pos\": 6}, {\"start_line_no\": 1, \"start_line_pos\": 1, \"code\": \"LT09\", \"description\": \"Select targets should be on a new line unless there is only one select target.\", \"name\": \"layout.select_targets\", \"warning\": false, \"fixes\": [{\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 7, \"start_file_pos\": 6, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 8, \"start_file_pos\": 7, \"end_line_no\": 1, \"end_line_pos\": 8, \"end_file_pos\": 7}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 15, \"start_file_pos\": 14, \"end_line_no\": 1, \"end_line_pos\": 16, \"end_file_pos\": 15}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 16, \"start_file_pos\": 15, \"end_line_no\": 1, \"end_line_pos\": 16, \"end_file_pos\": 15}, {\"type\": \"delete\", \"edit\": \"\", \"start_line_no\": 1, \"start_line_pos\": 24, \"start_file_pos\": 23, \"end_line_no\": 1, \"end_line_pos\": 25, \"end_file_pos\": 24}, {\"type\": \"create_before\", \"edit\": \"\\n\", \"start_line_no\": 1, \"start_line_pos\": 25, \"start_file_pos\": 24, \"end_line_no\": 1, \"end_line_pos\": 25, \"end_file_pos\": 24}], \"start_file_pos\": 0, \"end_line_no\": 1, \"end_line_pos\": 24, \"end_file_pos\": 23}, {\"start_line_no\": 1, \"start_line_pos\": 25, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"FROM\", \"start_line_no\": 1, \"start_line_pos\": 25, \"start_file_pos\": 24, \"end_line_no\": 1, \"end_line_pos\": 29, \"end_file_pos\": 28}], \"start_file_pos\": 24, \"end_line_no\": 1, \"end_line_pos\": 29, \"end_file_pos\": 28}, {\"start_line_no\": 1, \"start_line_pos\": 37, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"GROUP\", \"start_line_no\": 1, \"start_line_pos\": 37, \"start_file_pos\": 36, \"end_line_no\": 1, \"end_line_pos\": 42, \"end_file_pos\": 41}], \"start_file_pos\": 36, \"end_line_no\": 1, \"end_line_pos\": 42, \"end_file_pos\": 41}, {\"start_line_no\": 1, \"start_line_pos\": 43, \"code\": \"CP01\", \"description\": \"Keywords must be upper case.\", \"name\": \"capitalisation.keywords\", \"warning\": false, \"fixes\": [{\"type\": \"replace\", \"edit\": \"BY\", \"start_line_no\": 1, \"start_line_pos\": 43, \"start_file_pos\": 42, \"end_line_no\": 1, \"end_line_pos\": 45, \"end_file_pos\": 44}], \"start_file_pos\": 42, \"end_line_no\": 1, \"end_line_pos\": 45, \"end_file_pos\": 44}], \"statistics\": {\"source_chars\": 52, \"templated_chars\": 52, \"segments\": 47, \"raw_segments\": 29}, \"timings\": {\"templating\": 1.8250022549182177e-05, \"lexing\": 0.00022599997464567423, \"parsing\": 0.003446541028097272, \"linting\": 0.0005059579852968454, \"CP01\": 0.0002288329997099936, \"LT09\": 0.00017029204173013568, \"LT12\": 2.7375004719942808e-05}}]\n",
+        "stderr": "",
+        "bytes": 12250
+      },
+      "wrapped": {
+        "command": "<workspace>/work/rtk-3920/rtk-after",
+        "args": [
+          "sqlfluff",
+          "lint",
+          "--ignore-local-config",
+          "--config",
+          "<workspace>/work/rtk-3920/fixture/.sqlfluff",
+          "models"
+        ],
+        "exit": 1,
+        "stdout": "SQLFluff: 18 violations in 4 files (18 fixable)\n═══════════════════════════════════════\nTop rules:\n  CP01 (14x, first at models/customers.sql:1): Keywords must be upper case.\n  LT09 (4x, first at models/customers.sql:1): Select targets should be on a new line unless there is only one select target.\n\nTop files:\n  models/settings.sql (5 violations)\n    CP01 (4, first at line 1)\n    LT09 (1, line 1)\n  models/status.sql (5 violations)\n    CP01 (4, first at line 1)\n    LT09 (1, line 1)\n  models/customers.sql (4 violations)\n    CP01 (3, first at line 1)\n    LT09 (1, line 1)\n  models/orders.sql (4 violations)\n    CP01 (3, first at line 1)\n    LT09 (1, line 1)\n\nViolations:\n  models/settings.sql:1:1 CP01\n  models/settings.sql:1:1 LT09\n  models/settings.sql:1:20 CP01\n  models/settings.sql:1:34 CP01\n  models/settings.sql:1:40 CP01\n  models/status.sql:1:1 CP01\n  models/status.sql:1:1 LT09\n  models/status.sql:1:25 CP01\n  models/status.sql:1:37 CP01\n  models/status.sql:1:43 CP01\n  models/customers.sql:1:1 CP01\n  models/customers.sql:1:1 LT09\n  models/customers.sql:1:17 CP01\n  models/customers.sql:1:32 CP01\n  models/orders.sql:1:1 CP01\n  models/orders.sql:1:1 LT09\n  models/orders.sql:1:18 CP01\n  models/orders.sql:1:30 CP01\n\n💡 Run `sqlfluff fix` to auto-fix 18 violations\n[full output: rtk recall 05a409b7c6b8]\n",
+        "stderr": "",
+        "bytes": 1396
+      },
+      "dispatched": {
+        "command": "<workspace>/work/rtk-3920/rtk-after",
+        "args": [
+          "lint",
+          "sqlfluff",
+          "lint",
+          "--ignore-local-config",
+          "--config",
+          "<workspace>/work/rtk-3920/fixture/.sqlfluff",
+          "models"
+        ],
+        "exit": 1,
+        "stdout": "SQLFluff: 18 violations in 4 files (18 fixable)\n═══════════════════════════════════════\nTop rules:\n  CP01 (14x, first at models/customers.sql:1): Keywords must be upper case.\n  LT09 (4x, first at models/customers.sql:1): Select targets should be on a new line unless there is only one select target.\n\nTop files:\n  models/settings.sql (5 violations)\n    CP01 (4, first at line 1)\n    LT09 (1, line 1)\n  models/status.sql (5 violations)\n    CP01 (4, first at line 1)\n    LT09 (1, line 1)\n  models/customers.sql (4 violations)\n    CP01 (3, first at line 1)\n    LT09 (1, line 1)\n  models/orders.sql (4 violations)\n    CP01 (3, first at line 1)\n    LT09 (1, line 1)\n\nViolations:\n  models/settings.sql:1:1 CP01\n  models/settings.sql:1:1 LT09\n  models/settings.sql:1:20 CP01\n  models/settings.sql:1:34 CP01\n  models/settings.sql:1:40 CP01\n  models/status.sql:1:1 CP01\n  models/status.sql:1:1 LT09\n  models/status.sql:1:25 CP01\n  models/status.sql:1:37 CP01\n  models/status.sql:1:43 CP01\n  models/customers.sql:1:1 CP01\n  models/customers.sql:1:1 LT09\n  models/customers.sql:1:17 CP01\n  models/customers.sql:1:32 CP01\n  models/orders.sql:1:1 CP01\n  models/orders.sql:1:1 LT09\n  models/orders.sql:1:18 CP01\n  models/orders.sql:1:30 CP01\n\n💡 Run `sqlfluff fix` to auto-fix 18 violations\n[full output: rtk recall 88935b3c1af7]\n",
+        "stderr": "",
+        "bytes": 1396
+      },
+      "piped": {
+        "command": "<workspace>/work/rtk-3920/rtk-after",
+        "args": [
+          "pipe",
+          "-f",
+          "sqlfluff-lint"
+        ],
+        "exit": 0,
+        "stdout": "SQLFluff: 18 violations in 4 files (18 fixable)\n═══════════════════════════════════════\nTop rules:\n  CP01 (14x, first at models/customers.sql:1): Keywords must be upper case.\n  LT09 (4x, first at models/customers.sql:1): Select targets should be on a new line unless there is only one select target.\n\nTop files:\n  models/settings.sql (5 violations)\n    CP01 (4, first at line 1)\n    LT09 (1, line 1)\n  models/status.sql (5 violations)\n    CP01 (4, first at line 1)\n    LT09 (1, line 1)\n  models/customers.sql (4 violations)\n    CP01 (3, first at line 1)\n    LT09 (1, line 1)\n  models/orders.sql (4 violations)\n    CP01 (3, first at line 1)\n    LT09 (1, line 1)\n\nViolations:\n  models/settings.sql:1:1 CP01\n  models/settings.sql:1:1 LT09\n  models/settings.sql:1:20 CP01\n  models/settings.sql:1:34 CP01\n  models/settings.sql:1:40 CP01\n  models/status.sql:1:1 CP01\n  models/status.sql:1:1 LT09\n  models/status.sql:1:25 CP01\n  models/status.sql:1:37 CP01\n  models/status.sql:1:43 CP01\n  models/customers.sql:1:1 CP01\n  models/customers.sql:1:1 LT09\n  models/customers.sql:1:17 CP01\n  models/customers.sql:1:32 CP01\n  models/orders.sql:1:1 CP01\n  models/orders.sql:1:1 LT09\n  models/orders.sql:1:18 CP01\n  models/orders.sql:1:30 CP01\n\n💡 Run `sqlfluff fix` to auto-fix 18 violations",
+        "stderr": "",
+        "bytes": 1356
+      }
+    },
+    {
+      "tool": "ruff",
+      "version": "ruff 0.16.6",
+      "diagnostics": [
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/four.py",
+          "code": "F401",
+          "message": "`os` imported but unused",
+          "line": 1,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/four.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 3,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/four.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 4,
+          "col": 9
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/one.py",
+          "code": "F401",
+          "message": "`os` imported but unused",
+          "line": 1,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/one.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 3,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/one.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 4,
+          "col": 9
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/three.py",
+          "code": "F401",
+          "message": "`os` imported but unused",
+          "line": 1,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/three.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 3,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/three.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 4,
+          "col": 9
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/two.py",
+          "code": "F401",
+          "message": "`os` imported but unused",
+          "line": 1,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/two.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 3,
+          "col": 8
+        },
+        {
+          "file": "<workspace>/work/rtk-3920/fixture/src/two.py",
+          "code": "E701",
+          "message": "Multiple statements on one line (colon)",
+          "line": 4,
+          "col": 9
+        }
+      ],
+      "native": {
+        "command": "ruff",
+        "args": [
+          "check",
+          "--isolated",
+          "--select",
+          "F401,E701",
+          "src"
+        ],
+        "exit": 1,
+        "stdout": "F401 [*] `os` imported but unused\n --> src/four.py:1:8\n  |\n1 | import os\n  |        ^^\n2 |\n3 | if True: print(\"seven\")\n  |\nhelp: Remove unused import: `os`\n  |\n  - import os\n1 |\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/four.py:3:8\n  |\n1 | import os\n2 |\n3 | if True: print(\"seven\")\n  |        ^\n4 | if False: print(\"eight\")\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/four.py:4:9\n  |\n3 | if True: print(\"seven\")\n4 | if False: print(\"eight\")\n  |         ^\n\nF401 [*] `os` imported but unused\n --> src/one.py:1:8\n  |\n1 | import os\n  |        ^^\n2 |\n3 | if True: print(\"one\")\n  |\nhelp: Remove unused import: `os`\n  |\n  - import os\n1 |\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/one.py:3:8\n  |\n1 | import os\n2 |\n3 | if True: print(\"one\")\n  |        ^\n4 | if False: print(\"two\")\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/one.py:4:9\n  |\n3 | if True: print(\"one\")\n4 | if False: print(\"two\")\n  |         ^\n\nF401 [*] `os` imported but unused\n --> src/three.py:1:8\n  |\n1 | import os\n  |        ^^\n2 |\n3 | if True: print(\"five\")\n  |\nhelp: Remove unused import: `os`\n  |\n  - import os\n1 |\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/three.py:3:8\n  |\n1 | import os\n2 |\n3 | if True: print(\"five\")\n  |        ^\n4 | if False: print(\"six\")\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/three.py:4:9\n  |\n3 | if True: print(\"five\")\n4 | if False: print(\"six\")\n  |         ^\n\nF401 [*] `os` imported but unused\n --> src/two.py:1:8\n  |\n1 | import os\n  |        ^^\n2 |\n3 | if True: print(\"three\")\n  |\nhelp: Remove unused import: `os`\n  |\n  - import os\n1 |\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/two.py:3:8\n  |\n1 | import os\n2 |\n3 | if True: print(\"three\")\n  |        ^\n4 | if False: print(\"four\")\n  |\n\nE701 Multiple statements on one line (colon)\n --> src/two.py:4:9\n  |\n3 | if True: print(\"three\")\n4 | if False: print(\"four\")\n  |         ^\n\nFound 12 errors.\n[*] 4 fixable with the `--fix` option.\n",
+        "stderr": "",
+        "bytes": 1986
+      },
+      "raw": {
+        "command": "ruff",
+        "args": [
+          "check",
+          "--isolated",
+          "--select",
+          "F401,E701",
+          "src",
+          "--output-format=json"
+        ],
+        "exit": 1,
+        "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 1\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/four.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `os`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`os` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 3\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/four.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 8,\n      \"row\": 3\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 4\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/four.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 9,\n      \"row\": 4\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 1\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/one.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `os`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`os` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 3\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/one.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 8,\n      \"row\": 3\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 4\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/one.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 9,\n      \"row\": 4\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 1\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/three.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `os`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`os` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 3\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/three.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 8,\n      \"row\": 3\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 4\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/three.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 9,\n      \"row\": 4\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 1\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/two.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `os`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`os` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 3\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/two.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 8,\n      \"row\": 3\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E701\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 4\n    },\n    \"filename\": \"<workspace>/work/rtk-3920/fixture/src/two.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 9,\n      \"row\": 4\n    },\n    \"message\": \"Multiple statements on one line (colon)\",\n    \"name\": \"multiple-statements-on-one-line-colon\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon\"\n  }\n]",
+        "stderr": "",
+        "bytes": 7671
+      },
+      "wrapped": {
+        "command": "<workspace>/work/rtk-3920/rtk-after",
+        "args": [
+          "ruff",
+          "check",
+          "--isolated",
+          "--select",
+          "F401,E701",
+          "src"
+        ],
+        "exit": 1,
+        "stdout": "Ruff: 12 issues in 4 files (4 fixable)\nTop rules:\n  E701 (8x): Multiple statements on one line (colon)\n  F401 (4x): `os` imported but unused\n\nTop files:\n  src/four.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/one.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/three.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/two.py (3 issues)\n    E701 (2)\n    F401 (1)\n\nViolations:\n  src/four.py:1:8 F401\n  src/four.py:3:8 E701\n  src/four.py:4:9 E701\n  src/one.py:1:8 F401\n  src/one.py:3:8 E701\n  src/one.py:4:9 E701\n  src/three.py:1:8 F401\n  src/three.py:3:8 E701\n  src/three.py:4:9 E701\n  src/two.py:1:8 F401\n  src/two.py:3:8 E701\n  src/two.py:4:9 E701\n\n[hint] Run `ruff check --fix` to auto-fix 4 issues\n",
+        "stderr": "",
+        "bytes": 694
+      },
+      "dispatched": {
+        "command": "<workspace>/work/rtk-3920/rtk-after",
+        "args": [
+          "lint",
+          "ruff",
+          "check",
+          "--isolated",
+          "--select",
+          "F401,E701",
+          "src"
+        ],
+        "exit": 1,
+        "stdout": "Ruff: 12 issues in 4 files (4 fixable)\nTop rules:\n  E701 (8x): Multiple statements on one line (colon)\n  F401 (4x): `os` imported but unused\n\nTop files:\n  src/four.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/one.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/three.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/two.py (3 issues)\n    E701 (2)\n    F401 (1)\n\nViolations:\n  src/four.py:1:8 F401\n  src/four.py:3:8 E701\n  src/four.py:4:9 E701\n  src/one.py:1:8 F401\n  src/one.py:3:8 E701\n  src/one.py:4:9 E701\n  src/three.py:1:8 F401\n  src/three.py:3:8 E701\n  src/three.py:4:9 E701\n  src/two.py:1:8 F401\n  src/two.py:3:8 E701\n  src/two.py:4:9 E701\n\n[hint] Run `ruff check --fix` to auto-fix 4 issues\n[full output: rtk recall e3c10e849f88]\n",
+        "stderr": "",
+        "bytes": 733
+      },
+      "piped": {
+        "command": "<workspace>/work/rtk-3920/rtk-after",
+        "args": [
+          "pipe",
+          "-f",
+          "ruff-check"
+        ],
+        "exit": 0,
+        "stdout": "Ruff: 12 issues in 4 files (4 fixable)\nTop rules:\n  E701 (8x): Multiple statements on one line (colon)\n  F401 (4x): `os` imported but unused\n\nTop files:\n  src/four.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/one.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/three.py (3 issues)\n    E701 (2)\n    F401 (1)\n  src/two.py (3 issues)\n    E701 (2)\n    F401 (1)\n\nViolations:\n  src/four.py:1:8 F401\n  src/four.py:3:8 E701\n  src/four.py:4:9 E701\n  src/one.py:1:8 F401\n  src/one.py:3:8 E701\n  src/one.py:4:9 E701\n  src/three.py:1:8 F401\n  src/three.py:3:8 E701\n  src/three.py:4:9 E701\n  src/two.py:1:8 F401\n  src/two.py:3:8 E701\n  src/two.py:4:9 E701\n\n[hint] Run `ruff check --fix` to auto-fix 4 issues",
+        "stderr": "",
+        "bytes": 693
+      }
+    }
+  ]
+}

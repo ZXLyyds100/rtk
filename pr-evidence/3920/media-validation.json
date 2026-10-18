@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-18T09:29:56.201Z",
+  "video": {
+    "duration": 12.88,
+    "width": 1440,
+    "height": 1200,
+    "samples": [
+      1.5,
+      4,
+      6.8,
+      11.88
+    ],
+    "actual": [
+      1.5,
+      4,
+      6.8,
+      11.88
+    ],
+    "decodedAndSeeked": true
+  },
+  "media": [
+    {
+      "name": "sqlfluff-before.png",
+      "bytes": 226922,
+      "sha256": "5347e4af31591949448c3d59a5a7444e375117b068c1b135216f62bb3827ab14",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "name": "sqlfluff-after.png",
+      "bytes": 190840,
+      "sha256": "0ceb3db154217acfdf03c7af0c93d6bc9afffc5c0ca3a6504a0c8102b3eceb29",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "name": "ruff-before.png",
+      "bytes": 161802,
+      "sha256": "8db3070356cafffc2b1480ea94dc331a7184e1545cbf9d2d353b2adc242971ea",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "name": "ruff-after.png",
+      "bytes": 140618,
+      "sha256": "3ad04d67d1cbfb5a5ea1c50a3cbf111023f17efa00a7ab5e8d1f38a11e2865c2",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "name": "before-after.webm",
+      "bytes": 1207592,
+      "sha256": "4fc1a9f2c17ca6be86692d27b5ec03622172bab47615a2d9bb51995f8e1d61a3"
+    }
+  ],
+  "scope": "A labeled viewer of unchanged real local native-tool process captures. Not product UI, not a live service, not mocked linter results."
+}

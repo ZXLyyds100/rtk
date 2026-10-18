@@ -1,0 +1,472 @@
+{
+  "at": "2026-10-18T09:30:59.211Z",
+  "source": {
+    "base": "e542dca0bdcc262fa035dcf7fc33910cdcc8cdaf",
+    "head": "265e479426275cff1b093e0f3dbe5c0e5dca4416",
+    "branch": "fix/python-lint-rule-details",
+    "files": [
+      "src/cmds/python/README.md",
+      "src/cmds/python/ruff_cmd.rs",
+      "src/cmds/python/sqlfluff_cmd.rs",
+      "tests/fixtures/ruff_check_repeated_raw.json"
+    ],
+    "sha256": {
+      "src/cmds/python/README.md": "7405f666b8bb2b83dd80e1be0dc5a67dc18a5786ba03bec0bfc43f8345ab081a",
+      "src/cmds/python/ruff_cmd.rs": "97845c0c1d378d69b14723aad5324a6347d3a0d74ca9d2ab9d4fefbbf834bd3a",
+      "src/cmds/python/sqlfluff_cmd.rs": "ae4670bcda572cbe20dbaca96ebed415815fa01c9206d3e2e23b7dc49b3a0240",
+      "tests/fixtures/ruff_check_repeated_raw.json": "641c47e7ee65f0df5245377bef1ed1213f74fac5fc95af53878467800947fb7c"
+    },
+    "trackedDiffSha256": "2d3acbe1080bce3911f4ea711af93b09b37033ecc1da67ff632c48914317a6f6"
+  },
+  "tests": [
+    {
+      "label": "focused-frozen",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--lib",
+        "cmds::python::"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 96,
+        "failed": 0,
+        "ignored": 0
+      },
+      "at": "2026-10-18T09:13:40.388Z",
+      "seconds": 0.64
+    },
+    {
+      "label": "full-workspace",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 4967,
+        "failed": 0,
+        "ignored": 8
+      },
+      "at": "2026-10-18T09:03:18.329Z",
+      "seconds": 128.309
+    },
+    {
+      "label": "no-default-features",
+      "command": [
+        "cargo",
+        "test",
+        "--no-default-features",
+        "--locked"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 4507,
+        "failed": 0,
+        "ignored": 8
+      },
+      "at": "2026-10-18T09:07:28.320Z",
+      "seconds": 117.872
+    },
+    {
+      "label": "ignored",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--locked",
+        "--",
+        "--ignored"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 8,
+        "failed": 0,
+        "ignored": 0
+      },
+      "at": "2026-10-18T09:05:33.260Z",
+      "seconds": 2.685
+    },
+    {
+      "label": "clippy-final",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--locked",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      "at": "2026-10-18T09:02:56.527Z",
+      "seconds": 16.719
+    },
+    {
+      "label": "fmt-check",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      "at": "2026-10-18T09:05:31.840Z",
+      "seconds": 1.265
+    },
+    {
+      "label": "proxy-fmt-check",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "proxy/Cargo.toml",
+        "--all",
+        "--check"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      "at": "2026-10-18T09:05:31.902Z",
+      "seconds": 1.325
+    },
+    {
+      "label": "frozen-build",
+      "command": [
+        "cargo",
+        "build",
+        "--locked"
+      ],
+      "exit": 0,
+      "totals": {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      "at": "2026-10-18T09:02:40.270Z",
+      "seconds": 0.499
+    }
+  ],
+  "originalRegressionExit": 101,
+  "nativeDiagnosticsEqual": true,
+  "fixtureProvenanceVerified": true,
+  "media": {
+    "at": "2026-10-18T09:29:56.201Z",
+    "video": {
+      "duration": 12.88,
+      "width": 1440,
+      "height": 1200,
+      "samples": [
+        1.5,
+        4,
+        6.8,
+        11.88
+      ],
+      "actual": [
+        1.5,
+        4,
+        6.8,
+        11.88
+      ],
+      "decodedAndSeeked": true
+    },
+    "media": [
+      {
+        "name": "sqlfluff-before.png",
+        "bytes": 226922,
+        "sha256": "5347e4af31591949448c3d59a5a7444e375117b068c1b135216f62bb3827ab14",
+        "width": 1440,
+        "height": 1200
+      },
+      {
+        "name": "sqlfluff-after.png",
+        "bytes": 190840,
+        "sha256": "0ceb3db154217acfdf03c7af0c93d6bc9afffc5c0ca3a6504a0c8102b3eceb29",
+        "width": 1440,
+        "height": 1200
+      },
+      {
+        "name": "ruff-before.png",
+        "bytes": 161802,
+        "sha256": "8db3070356cafffc2b1480ea94dc331a7184e1545cbf9d2d353b2adc242971ea",
+        "width": 1440,
+        "height": 1200
+      },
+      {
+        "name": "ruff-after.png",
+        "bytes": 140618,
+        "sha256": "3ad04d67d1cbfb5a5ea1c50a3cbf111023f17efa00a7ab5e8d1f38a11e2865c2",
+        "width": 1440,
+        "height": 1200
+      },
+      {
+        "name": "before-after.webm",
+        "bytes": 1207592,
+        "sha256": "4fc1a9f2c17ca6be86692d27b5ec03622172bab47615a2d9bb51995f8e1d61a3"
+      }
+    ],
+    "scope": "A labeled viewer of unchanged real local native-tool process captures. Not product UI, not a live service, not mocked linter results."
+  },
+  "performance": {
+    "at": "2026-10-18T09:25:11.750Z",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "method": "Release builds; 5 warmups then 40 interleaved process launches per variant and filter. Identical real-tool JSON on stdin, isolated config/data, telemetry disabled. Timings include OS process launch, CLI, filtering, and output capture; not an isolated filter microbenchmark or a hook-startup guarantee.",
+    "binarySha256": {
+      "before": "c9a58a9ebe71eb271f40e0c8230b4461bf9ee8b0af5461ed6367eed53d7a4da3",
+      "after": "3ca28613deac590ff482944f5c4a7bdff79dcd1b1f5e177aa89a8afbd26f01d2"
+    },
+    "samples": [
+      {
+        "tool": "ruff",
+        "inputBytes": 7671,
+        "inputSha256": "b0c22ef74412bf2ebb6cac4211d48f1101d5c7c3bc026977ca228c5d44b7b731",
+        "before": {
+          "runs": 40,
+          "minMs": 4.376791,
+          "medianMs": 4.8824165,
+          "p95Ms": 5.868167,
+          "samplesMs": [
+            6.018625,
+            5.67,
+            5.113166,
+            4.747667,
+            4.705875,
+            4.494333,
+            5.196542,
+            4.869458,
+            5.165667,
+            5.329875,
+            4.576583,
+            5.119667,
+            4.519,
+            4.862208,
+            4.466291,
+            4.790209,
+            4.540333,
+            4.925333,
+            5.504083,
+            5.868167,
+            4.919166,
+            5.223625,
+            4.588666,
+            4.895375,
+            4.696042,
+            4.746042,
+            4.856583,
+            4.65725,
+            5.611334,
+            5.384417,
+            4.770166,
+            5.250125,
+            6.504791,
+            4.768292,
+            4.376791,
+            4.588583,
+            5.25575,
+            4.694,
+            5.166834,
+            5.383541
+          ]
+        },
+        "after": {
+          "runs": 40,
+          "minMs": 4.295583,
+          "medianMs": 4.8828125,
+          "p95Ms": 5.718333,
+          "samplesMs": [
+            5.718333,
+            5.259083,
+            5.491875,
+            5.270625,
+            5.602042,
+            4.608291,
+            4.891625,
+            4.6805,
+            4.648042,
+            4.299584,
+            4.399709,
+            4.805791,
+            4.541084,
+            5.4645,
+            5.056583,
+            5.289875,
+            5.657291,
+            4.913583,
+            4.874,
+            4.819584,
+            5.0185,
+            5.268625,
+            4.487625,
+            5.394667,
+            5.951583,
+            4.896291,
+            5.314125,
+            4.643375,
+            4.74125,
+            4.597,
+            4.505917,
+            4.725834,
+            7.689625,
+            5.296958,
+            5.298083,
+            4.647416,
+            4.706625,
+            4.295583,
+            4.779709,
+            4.482208
+          ]
+        }
+      },
+      {
+        "tool": "sqlfluff",
+        "inputBytes": 12250,
+        "inputSha256": "e3b30d44102dbbb722686814c08d969f2b70261fb56b10806421193571612f55",
+        "before": {
+          "runs": 40,
+          "minMs": 4.136791,
+          "medianMs": 4.504646,
+          "p95Ms": 5.35675,
+          "samplesMs": [
+            4.799,
+            5.273167,
+            4.392125,
+            4.688208,
+            4.150792,
+            4.48125,
+            4.136791,
+            4.540583,
+            4.308,
+            4.253583,
+            4.440667,
+            4.409042,
+            4.883417,
+            4.394375,
+            5.265875,
+            4.584166,
+            5.35675,
+            5.3815,
+            4.856334,
+            5.063042,
+            4.458542,
+            4.648,
+            4.18225,
+            4.3775,
+            4.152834,
+            4.403583,
+            4.377584,
+            4.368375,
+            4.941791,
+            4.407,
+            5.187584,
+            5.248375,
+            4.783292,
+            5.535708,
+            4.707333,
+            4.92775,
+            4.446667,
+            4.528042,
+            4.252583,
+            4.440375
+          ]
+        },
+        "after": {
+          "runs": 40,
+          "minMs": 4.147208,
+          "medianMs": 4.6875415,
+          "p95Ms": 5.202708,
+          "samplesMs": [
+            4.483791,
+            4.78375,
+            4.235708,
+            5.036375,
+            4.313625,
+            5.139208,
+            4.734208,
+            4.965709,
+            5.381667,
+            4.416916,
+            5.099375,
+            4.469459,
+            4.7445,
+            4.147208,
+            4.535334,
+            4.166208,
+            4.38975,
+            4.244792,
+            4.776041,
+            5.002667,
+            4.498875,
+            5.32075,
+            4.783708,
+            4.859458,
+            5.091334,
+            4.640875,
+            5.130166,
+            4.297041,
+            4.821208,
+            4.246167,
+            4.549167,
+            4.221459,
+            4.552208,
+            4.355333,
+            4.389459,
+            5.140541,
+            4.472542,
+            5.202708,
+            5.122333,
+            4.9405
+          ]
+        }
+      }
+    ]
+  },
+  "nativeSummary": [
+    {
+      "tool": "sqlfluff",
+      "version": "sqlfluff, version 4.3.0",
+      "diagnostics": 18,
+      "nativeTextBytes": 1863,
+      "beforeRTKBytes": 2008,
+      "afterRTKBytes": 1396,
+      "directExit": 1,
+      "lintDispatchExit": 1,
+      "pipeExit": 0
+    },
+    {
+      "tool": "ruff",
+      "version": "ruff 0.16.6",
+      "diagnostics": 12,
+      "nativeTextBytes": 1986,
+      "beforeRTKBytes": 1047,
+      "afterRTKBytes": 694,
+      "directExit": 1,
+      "lintDispatchExit": 1,
+      "pipeExit": 0
+    }
+  ],
+  "limits": [
+    "Fixture-specific output bytes, not tokenizer or API billing.",
+    "Existing 100-character message and 50-detail caps preserved.",
+    "SQLFluff pipe has no independent recovery hint; direct runner recovery verified.",
+    "macOS arm64 only; hosted multi-platform CI and human review not claimed.",
+    "No CLA signature or maintainer workflow approval supplied by this agent."
+  ]
+}
